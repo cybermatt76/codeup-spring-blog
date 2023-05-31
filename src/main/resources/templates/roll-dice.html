@@ -6,14 +6,22 @@
   <div th:include="partials/head"></div>
 </head>
 <body>
-<div th:include="partials/navbar"></div>
-<h2>Guess a number between 1 and 6:</h2>
+<div class="page-wrapper">
+  <div th:include="partials/navbar"></div>
+  <div class="content-wrapper">
+  <div class="dicegame-wrapper">
+    <div class="number-wrapper">
+    <h2>Guess a number between 1 and 6:</h2>
 <a th:href="@{/roll-dice/1}">1</a>
 <a th:href="@{/roll-dice/2}">2</a>
 <a th:href="@{/roll-dice/3}">3</a>
 <a th:href="@{/roll-dice/4}">4</a>
 <a th:href="@{/roll-dice/5}">5</a>
 <a th:href="@{/roll-dice/6}">6</a>
-<div th:include="partials/footer"></div>
+    </div>
+  </div>
+  <div th:include="partials/footer"></div>
+  </div>
+  </div>
 </body>
 </html>

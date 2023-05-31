@@ -6,8 +6,12 @@
   <div th:include="partials/head"></div>
 </head>
 <body>
+
+<div class="page-wrapper">
+  <div th:include="partials/navbar"></div>
+  <div class="content-wrapper">
 <!-- Include the navbar partial -->
-<div th:include="partials/navbar"></div>
+
 
 <!-- Include the header partial -->
 <div th:include="partials/header"></div>
@@ -19,5 +23,7 @@
 
 <!-- Include the footer partial -->
 <div th:include="partials/footer"></div>
+  </div>
+</div>
 </body>
 </html>

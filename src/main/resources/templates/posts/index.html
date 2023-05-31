@@ -3,24 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>All Posts</title>
+  <div th:include="partials/head"></div>
 </head>
 <body>
-<h1>All Posts</h1>
+<div th:include="partials/navbar"></div>
 
 <table>
   <thead>
   <tr>
     <th>Title</th>
-    <th>Body</th>
+    <th>Description</th>
   </tr>
   </thead>
   <tbody>
   <!-- Loop through posts and display them in the table -->
   <tr th:each="post : ${posts}">
-    <td th:text="${post.title}"></td>
-    <td th:text="${post.body}"></td>
+    <td><a th:href="@{/posts/{id}(id=${post.id})}" th:text="${post.title}"></a></td>
+    <td th:text="${post.description}"></td>
   </tr>
   </tbody>
 </table>
+
 </body>
 </html>

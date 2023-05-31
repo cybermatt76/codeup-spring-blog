@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create a Post</title>
+    <div th:include="partials/head"></div>
+</head>
+<body>
+<div th:include="partials/navbar"></div>
+<h1>Create a Post</h1>
+
+<form action="/posts/create" method="post">
+    <div>
+        <label for="title">Title:</label><br>
+        <input type="text" name="title" id="title">
+    </div>
+
+    <div>
+        <label for="description">Description:</label><br>
+        <textarea name="description" id="description" rows="4" cols="50"></textarea>
+    </div>
+
+    <div>
+        <input type="submit" value="Submit">
+    </div>
+</form>
+
+</body>
+</html>

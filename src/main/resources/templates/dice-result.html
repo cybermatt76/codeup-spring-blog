@@ -6,13 +6,27 @@
   <div th:include="partials/head"></div>
 </head>
 <body>
-<div th:include="partials/navbar"></div>
-<h2>Dice Roll Result:</h2>
+<div class="page-wrapper">
+  <div th:include="partials/navbar"></div>
+  <div class="content-wrapper">
+    <div class="dice-results-content">
+    <h2>Dice Roll Result:</h2>
+    <div class="dice-results-container">
 <p>Your guess: <span th:text="${guess}"></span></p>
 <p>Dice roll: <span th:text="${diceRoll}"></span></p>
 <p th:if="${isCorrectGuess}">Congratulations! You guessed correctly!</p>
 <p th:unless="${isCorrectGuess}">Sorry, your guess was incorrect.</p>
-<a href="/roll-dice">Play Again</a>
-<div th:include="partials/footer"></div>
+    </div>
+      <a href="/roll-dice">Play Again</a>
+    </div>
+    <div th:include="partials/footer"></div>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const diceResultsContainer = document.querySelector('.dice-results-container');
+    diceResultsContainer.style.opacity = 1;
+  });
+</script>
 </body>
 </html>
